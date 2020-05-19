@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DVPO 下载页面</title>
+  <link rel="stylesheet" type="text/css" href="./download.css">
+
+</head>
+<body > 
+
+  <div class="flex">
+    <h1>欢迎来到DVPO 下载页面</h1>
+  </div>
+  <div class="flex"><img src="logo.jpg" alt="" srcset=""></div>
+
+  <div class="flex" style="padding-top: 100px">
+    <a id="a-at"  class="button " style="justify-content:center;" href = 'javascript:alert("请使用手机！");'> AT 版本 </a>
+    <a id="a-cTest" class="button" href = 'javascript:alert("请使用手机！");'> 中国Test222 </a>
+    <a id="a-kTest" class="button" href = 'javascript:alert("请使用手机！");'> 韩国Test </a>
+  </div>
+
+
+
+</body>
+
+<script type="text/javascript">
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    let install_plist_str = ['at','cTest','kTest'][0];
+    url = (isiOS ? 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/'+install_plist_str+'.plist' : isAndroid?'':'')
+    if (isiOS) {
+      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/at.plist';
+      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/cTest.plist';
+      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/kTest.plist';
+    }else if (isAndroid) {
+      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/at.plist';
+      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/cTest.plist';
+      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/kTest.plist';
+    }
+  </script>
+
+</html>
