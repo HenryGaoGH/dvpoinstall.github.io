@@ -30,13 +30,13 @@
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
     let install_plist_str = ['at','cTest','kTest'][0];
     if (isiOS) {
-      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=./at.plist';
-      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=./cTest.plist';
-      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=./kTest.plist';
+      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/at.plist';
+      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/cTest.plist';
+      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/kTest.plist';
     }else if (isAndroid) {
-      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=./at.plist';
-      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=./cTest.plist';
-      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=./kTest.plist';
+      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/at.plist';
+      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/cTest.plist';
+      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/kTest.plist';
     }
   </script>
 
