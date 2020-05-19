@@ -29,15 +29,14 @@
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
     let install_plist_str = ['at','cTest','kTest'][0];
-    url = (isiOS ? 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/'+install_plist_str+'.plist' : isAndroid?'':'')
     if (isiOS) {
-      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/at.plist';
-      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/cTest.plist';
-      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/kTest.plist';
+      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=./at.plist';
+      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=./cTest.plist';
+      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=./kTest.plist';
     }else if (isAndroid) {
-      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/at.plist';
-      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/cTest.plist';
-      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=192.168.30.2:5000/static/kTest.plist';
+      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=./at.plist';
+      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=./cTest.plist';
+      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=./kTest.plist';
     }
   </script>
 
