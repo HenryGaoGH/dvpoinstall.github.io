@@ -20,6 +20,12 @@
     <a id="a-kTest" class="button" href = 'javascript:alert("请使用手机！");'> 韩国Test </a>
   </div>
 
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked('./README.md');
+  </script>
 
 
 </body>
