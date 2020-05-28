@@ -39,9 +39,9 @@
     }
 
     // 加载 MD 
-    fso = new ActiveXObject("Scripting.FileSystemObject");
-    ts = fso.OpenTextFile("./README.md", ForReading);
-    s = ts.ReadLine();
+    // fso = new ActiveXObject("Scripting.FileSystemObject");
+    // ts = fso.OpenTextFile("./README.md", ForReading);
+    // s = ts.ReadLine();
     document.getElementById('content').innerHTML = marked('./README.md');
   </script>
 
