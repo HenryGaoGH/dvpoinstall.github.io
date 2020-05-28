@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DVPO 下载页面</title>
   <link rel="stylesheet" type="text/css" href="./download.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body > 
 
@@ -19,15 +19,8 @@
     <a id="a-cTest" class="button" href = 'javascript:alert("请使用手机！");'> 中国Test </a>
     <a id="a-kTest" class="button" href = 'javascript:alert("请使用手机！");'> 韩国Test </a>
   </div>
-
   <div id="content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    document.getElementById('content').innerHTML =
-      marked('./README.md');
-  </script>
-
-
+  
 </body>
 
 <script type="text/javascript">
@@ -44,6 +37,12 @@
       document.getElementById('a-cTest').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/cTest.apk';
       document.getElementById('a-kTest').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/kTest.apk';
     }
+
+    // 加载 MD 
+    fso = new ActiveXObject("Scripting.FileSystemObject");
+    ts = fso.OpenTextFile("./README.md", ForReading);
+    s = ts.ReadLine();
+    document.getElementById('content').innerHTML = marked('./README.md');
   </script>
 
 </html>
