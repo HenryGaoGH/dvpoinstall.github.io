@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPO 下载页面</title>
+  <link rel="stylesheet" type="text/css" href="./download.css">
+</head>
+<body > 
+  <div class="flex">
+    <h1>欢迎来到DPO 下载页面</h1>
+  </div>
+  <div class="flex"><img src="dpo.png" style="width: 30%;"></div>
+  <div class="flex" style="padding-top: 100px">
+    <a id="text-dpo"  class="button " style="justify-content:center;" href = 'javascript:alert("请使用手机！");'> 测试版本 </a>
+  </div>
+  iOS 最新版本: 1.0.7 build 1 </br>
+  Android 最新版本 1.1.2
+  <div id="dg" style="z-index: 9999; position: fixed ! important; left: 0px; top: 0px;">
+    <a href="index.html" style="margin-left: 12px;">点我切换DVPO👈</a>
+  </div>
+  
+</body>
+
+<script type="text/javascript">
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    let install_plist_str = ['at','cTest','kTest'][0];
+    if (isiOS) {
+      document.getElementById('text-dpo').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/dpo.plist';
+    }else if (isAndroid) {
+      document.getElementById('text-dpo').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/dpo.apk';
+    }
+</script>
+
+</html>
