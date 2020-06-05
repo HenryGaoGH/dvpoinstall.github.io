@@ -13,6 +13,7 @@
   <div class="flex"><img src="dpo.png" style="width: 240px; height: 80px;"></div>
   <div class="flex" style="padding-top: 100px">
     <a id="text-dpo"  class="button " style="justify-content:center;" href = 'javascript:alert("请使用手机！");'> 测试版本 </a>
+    <a id="text-dpo-p"  class="button " style="justify-content:center;" href = 'javascript:alert("请使用手机！");'> 正式版本 </a>
   </div>
   iOS 最新版本: 1.0.7 build 5 </br>
   Android 最新版本 1.1.2
@@ -29,6 +30,7 @@
     let install_plist_str = ['at','cTest','kTest'][0];
     if (isiOS) {
       document.getElementById('text-dpo').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/dpo.plist';
+      document.getElementById('text-dpo-p').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/dpo_p.plist';
     }else if (isAndroid) {
       document.getElementById('text-dpo').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/dpo.apk';
     }
