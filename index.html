@@ -16,15 +16,20 @@
     <a id="a-cTest" class="button" href = 'javascript:alert("请使用手机！");'> 中国Test </a>
     <a id="a-kTest" class="button" href = 'javascript:alert("请使用手机！");'> 韩国Test </a>
   </div>
+  <div class="flex" style="padding-top: 20px;">
+    <a id="a-prd" class="button" href = 'javascript:alert("请使用手机！");' style="display:inline"> 中国正式 </a>
+  </div>
   <section >
     <h3>iOS 最新版本:</h3>
     <div style="margin-left: 20px;">
+      - 中国正式版本: 2.0.10 build 42 </br>
       - AT(中国演示): 2.0.10 build 42 </br>
       - 中国Test: 1.4.0 build 42 </br>
       - 韩国测试: 2.0.7 build 42 </br>
     </div>
     <h3>Android 最新版本:</h3>
     <div style="margin-left: 20px;">
+      - 中国正式版本: 2.0.13 </br>
       - AT(中国演示): 2.0.10 </br>
       - 中国Test: 2.0.10 </br>
       - 韩国测试: 2.0.10 </br>
@@ -46,10 +51,15 @@
       document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/at.plist';
       document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/cTest.plist';
       document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/kTest.plist';
+      document.getElementById('a-prd').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/prd.plist'
     }else if (isAndroid) {
       document.getElementById('a-at').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/at.apk';
       document.getElementById('a-cTest').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/cTest.apk';
       document.getElementById('a-kTest').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/kTest.apk';
+      document.getElementById('a-kTest').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/vpo.apk';
+    }
+    function pleaseWiat() {
+      alert('正在建设 请稍后!!');
     }
   </script>
 
