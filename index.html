@@ -22,7 +22,7 @@
   <section >
     <h3>iOS 最新版本:</h3>
     <div style="margin-left: 20px;">
-      - 中国正式版本: 2.0.10 build 42 </br>
+      - 中国正式版本: 2.1.0 build 5 </br>
       - AT(中国演示): 2.0.10 build 42 </br>
       - 中国Test: 1.4.0 build 42 </br>
       - 韩国测试: 2.0.7 build 42 </br>
@@ -46,7 +46,6 @@
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-    let install_plist_str = ['at','cTest','kTest'][0];
     if (isiOS) {
       document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/at.plist';
       document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/cTest.plist';
