@@ -13,8 +13,10 @@
     box-shadow: 1px 1px 3px 0px #666666;
     font-family: Arial;
     color: #ffffff;
-    font-size: 16px;
-    padding: 12px 30px 12px 30px;
+    font-size: 10px;
+    padding: 10px;
+    margin: auto;
+    /* padding: 12px 30px 12px 30px; */
     background: #3498db;
     border: solid #1f628d 1px;
     text-decoration: none;
