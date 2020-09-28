@@ -49,17 +49,19 @@
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-    if (isiOS) {
-      document.getElementById('a-at').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/at.plist';
-      document.getElementById('a-cTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/cTest.plist';
-      document.getElementById('a-kTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/kTest.plist';
-      document.getElementById('a-prd').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/prd.plist'
-      document.getElementById('a-localTest').href = 'itms-services://?action=download-manifest&url=https://henrygaogh.github.io/dvpoinstall.github.io/local.plist'
-    }else {
-      document.getElementById('a-at').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/at.apk';
-      document.getElementById('a-cTest').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/cTest.apk';
-      document.getElementById('a-kTest').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/kTest.apk';
-      document.getElementById('a-prd').href = 'https://henrygaogh.github.io/dvpoinstall.github.io/vpo.apk';
+
+    idObj = {
+      'at':'a-at',
+      'cTest':'a-cTest',
+      'kTest':'a-kTest',
+      'prd':'a-prd',
+      'local':'a-localTest'
+    }
+    prefix = isiOS ? 'itms-services://?action=download-manifest&url=' : '';
+    postfix = isiOS ? '.plist' : '.apk';
+    for (key in idObj) {
+      if (!idObj.hasOwnProperty(key)) continue;
+      document.getElementById(idObj[key]).href = prefix + 'https://henrygaogh.github.io/dvpoinstall.github.io/'+ key + postfix;
     }
     function pleaseWiat() {
       alert('正在建设 请稍后!!');
